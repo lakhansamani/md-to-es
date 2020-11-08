@@ -19,9 +19,5 @@
 	},
 	"devDependencies": {
 		"prettier": "^2.1.2"
-	},
-	"scripts": {
-		"build": "tsc",
-		"prepublishOnly": "yarn run build"
 	}
 }
