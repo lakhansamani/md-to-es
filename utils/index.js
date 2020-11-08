@@ -134,7 +134,7 @@ const indexData = async ({
 		const { body: indexCheckRes } = await client.indices.exists({
 			index: elasticsearchIndex,
 		});
-		console.log(JSON.stringify(mappings));
+
 		if (!indexCheckRes) {
 			// create index
 			await client.indices.create({
