@@ -3,6 +3,9 @@
 Module to index your markdown data to Elasticsearch and empower your site with greate search experience.
 One can use [ReactiveSearch](https://opensource.appbase.io/reactivesearch/) to build the search experience on top of ElasticSearch data.
 
+## [Live Demo](https://md-to-es-demo.netlify.app/)
+## [Demo Code](https://github.com/lakhansamani/gatsby-md-es-demo)
+
 # Quick Start
 
 This module is available in 2 forms.
