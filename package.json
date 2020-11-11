@@ -6,9 +6,7 @@
 	"repository": "https://github.com/lakhansamani/md-to-es.git",
 	"author": "Lakhan Samani <lakhan.m.samani@gmail.com>",
 	"license": "MIT",
-	"bin": {
-		"mde": "bin/index.js"
-	},
+	"bin": "bin/index.js",
 	"dependencies": {
 		"@elastic/elasticsearch": "^7.9.1",
 		"lodash.chunk": "^4.2.0",
