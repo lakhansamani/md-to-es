@@ -155,6 +155,7 @@ const indexData = async ({
 
 		// process data in chunks of 25 documents
 		const fileChunks = chunk(files, 25);
+		const indexedDocuments = [];
 		for (const fileChunk of fileChunks) {
 			// parsed data
 			const dataObj = parse(fileChunk, options);
@@ -185,6 +186,7 @@ const indexData = async ({
 				// The presence of the `error` key indicates that the operation
 				// that we did for the document has failed.
 				bulkResponse.items.forEach((action, i) => {
+					console.log(action);
 					const operation = Object.keys(action)[0];
 					if (action[operation].error) {
 						erroredDocuments.push({
@@ -196,13 +198,20 @@ const indexData = async ({
 							operation: body[i * 2],
 							document: body[i * 2 + 1],
 						});
+					} else {
+						indexedDocuments.push(action);
 					}
 				});
-				console.log(erroredDocuments);
+				console.log('=> error documents', JSON.stringify(erroredDocuments));
+			} else {
+				bulkResponse.items.forEach((action) => {
+					indexedDocuments.push(action);
+				});
 			}
 		}
 
 		console.log(`=> Indexing data completed.`);
+		return indexedDocuments;
 	} catch (err) {
 		throw err;
 	}
