@@ -1,8 +1,8 @@
 {
 	"name": "md-to-es",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Markdown To Elasticsearch: Allows you to index the markdown data to Elasticsearch.",
-	"main": "lib/module.js",
+	"main": "lib/index.js",
 	"repository": "https://github.com/lakhansamani/md-to-es.git",
 	"author": "Lakhan Samani <lakhan.m.samani@gmail.com>",
 	"license": "MIT",
